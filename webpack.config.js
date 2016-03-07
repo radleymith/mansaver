@@ -4,7 +4,7 @@ var path = require('path'),
 
 module.exports = {
     devtool: "source-map",
-    entry: path.resolve(__dirname,"public/frontPage.jsx"),
+    entry: path.resolve(__dirname,"public/views/frontPage.jsx"),
     output: {
         path: path.resolve(__dirname, "build"),
         filename: "bundle.js"
