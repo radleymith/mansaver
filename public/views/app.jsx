@@ -12,6 +12,11 @@ import '../main.less'
 var App = React.createClass({
     render: function () {
         return (
+
+            <nav id="title-bar" className="navbar navbar-default">
+                <Title />
+                <NavBar />
+            </nav>
             <div id="whole">
                 <TitleBar />
                 <section id="intro" className="screen-section">

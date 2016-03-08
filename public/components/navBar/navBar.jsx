@@ -1,4 +1,5 @@
 import React from 'react';
+import NavLink from '../navLink/navLink.jsx'
 import './navBar.less';
 
 const NavBar = React.createClass({
@@ -7,14 +8,14 @@ const NavBar = React.createClass({
             <div id="nav-bar" className="pull-right">
                 <ul className="nav navbar-nav">
                     <li id="nav-about" className="nav-bar-item">
-                        <a href="#about">
+                        <NavLink to="/" onlyActiveOnIndex>
                             About
-                        </a>
+                        </NavLink>
                     </li>
                     <li id="nav-what-to-expect" className="nav-bar-item">
-                        <a href="#what-to-expect">
+                        <NavLink to="/expect">
                             What to Expect
-                        </a>
+                        </NavLink>
                     </li>
                     <li id="nav-pipe" className="nav-bar-item">
                         <a>
@@ -22,14 +23,14 @@ const NavBar = React.createClass({
                         </a>
                     </li>
                     <li id="nav-login" className="nav-bar-item">
-                        <a href="login_page">
+                        <NavLink to="/login">
                             Login
-                        </a>
+                        </NavLink>
                     </li>
                     <li id="nav-register" className="nav-bar-item">
-                        <a href="register_page">
+                        <NavLink to="/register">
                             Register
-                        </a>
+                        </NavLink>
                     </li>
                 </ul>
             </div>         
