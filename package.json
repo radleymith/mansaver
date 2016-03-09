@@ -28,17 +28,17 @@
     "node-jsx": "^0.13.3",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
-    "react-router": "^2.0.0"
+    "react-router": "^2.0.0",
+    "react-bootstrap": "^0.28.3",
+    "bootstrap": "^3.3.6"
   },
   "devDependencies": {
     "babel-core": "^6.5.2",
     "babel-loader": "^6.2.4",
-    "bootstrap": "^3.3.6",
     "copy-webpack-plugin": "^1.1.1",
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
     "less-loader": "^2.2.2",
-    "react-bootstrap": "^0.28.3",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.14",

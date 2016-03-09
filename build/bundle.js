@@ -24739,13 +24739,23 @@
 	
 	var _expect2 = _interopRequireDefault(_expect);
 	
+	var _login = __webpack_require__(482);
+	
+	var _login2 = _interopRequireDefault(_login);
+	
+	var _register = __webpack_require__(483);
+	
+	var _register2 = _interopRequireDefault(_register);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	module.exports = _react2.default.createElement(
 	    _reactRouter.Route,
 	    { path: '/', component: _app2.default },
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _home2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/expect', component: _expect2.default })
+	    _react2.default.createElement(_reactRouter.Route, { path: '/expect', component: _expect2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/login', component: _login2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/register', component: _register2.default })
 	);
 
 /***/ },
@@ -25554,13 +25564,7 @@
 	        return _react2.default.createElement(
 	            "div",
 	            { id: "explanation-text", className: "front-page-text" },
-	            "We know that you are busy.  We also know that you are human, and humans forget things. We at GiftMinder are here to help make sure you at least do not forget to have a gift, when you need one.  Simply ",
-	            _react2.default.createElement(
-	                "link",
-	                { href: "#" },
-	                "subscribe"
-	            ),
-	            " to our service, and we will provide you with a gift a week ahead of when you think you will need one."
+	            "We know that you are busy.  We also know that you are human, and humans forget things. We at GiftMinder are here to help make sure you at least do not forget to have a gift, when you need one.  Simply subscribe to our service, and we will provide you with a gift a week ahead of when you think you will need one."
 	        );
 	    }
 	});
@@ -42653,6 +42657,89 @@
 	});
 	
 	exports.default = Expect;
+
+/***/ },
+/* 482 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var Login = _react2.default.createClass({
+	    displayName: "Login",
+	
+	    render: function render() {
+	        return _react2.default.createElement(
+	            "div",
+	            null,
+	            _react2.default.createElement(
+	                "h2",
+	                { id: "login-header", className: "" },
+	                "Login"
+	            ),
+	            _react2.default.createElement("input", { type: "email", placeholder: "Email" }),
+	            _react2.default.createElement("input", { type: "password", placeholder: "Password" })
+	        );
+	    }
+	});
+	
+	exports.default = Login;
+
+/***/ },
+/* 483 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var Register = _react2.default.createClass({
+	    displayName: "Register",
+	
+	    render: function render() {
+	        return _react2.default.createElement(
+	            "div",
+	            null,
+	            _react2.default.createElement(
+	                "h2",
+	                { id: "register-header", className: "" },
+	                "Register"
+	            ),
+	            _react2.default.createElement(
+	                "form",
+	                { method: "POST" },
+	                _react2.default.createElement("input", { type: "text", placeholder: "First Name" }),
+	                _react2.default.createElement("input", { type: "text", placeholder: "Last Name" }),
+	                _react2.default.createElement("input", { type: "tel", pattern: "[\\+]\\d{2}[\\(]\\d{2}[\\)]\\d{4}[\\-]\\d{4}", placeholder: "Phone" }),
+	                _react2.default.createElement("input", { type: "number", placeholder: "Zip Code" }),
+	                _react2.default.createElement("input", { type: "email", placeholder: "Email" }),
+	                _react2.default.createElement("input", { type: "text", placeholder: "address" }),
+	                _react2.default.createElement("input", { type: "number", placeholder: "Zip Code" }),
+	                _react2.default.createElement("input", { type: "password", placeholder: "Password" }),
+	                _react2.default.createElement("input", { type: "password", placeholder: "Password" })
+	            )
+	        );
+	    }
+	});
+	
+	exports.default = Register;
 
 /***/ }
 /******/ ]);
