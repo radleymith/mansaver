@@ -8,10 +8,13 @@ import '../main.less'
 var App = React.createClass({
     render: function () {
         return (
-            <nav id="title-bar" className="navbar navbar-default">
-                <Title />
-                <NavBar />
-            </nav>
+            <div>
+                <nav id="title-bar" className="navbar navbar-default">
+                    <Title />
+                    <NavBar />
+                </nav>
+                {this.props.children}
+            </div>
         );
     }
 });

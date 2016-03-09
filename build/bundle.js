@@ -24782,10 +24782,15 @@
 	
 	    render: function render() {
 	        return _react2.default.createElement(
-	            'nav',
-	            { id: 'title-bar', className: 'navbar navbar-default' },
-	            _react2.default.createElement(_title2.default, null),
-	            _react2.default.createElement(_navBar2.default, null)
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	                'nav',
+	                { id: 'title-bar', className: 'navbar navbar-default' },
+	                _react2.default.createElement(_title2.default, null),
+	                _react2.default.createElement(_navBar2.default, null)
+	            ),
+	            this.props.children
 	        );
 	    }
 	});
