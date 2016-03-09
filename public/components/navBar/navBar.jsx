@@ -6,7 +6,7 @@ const NavBar = React.createClass({
     render: function () {
         return (
             <div id="nav-bar" className="pull-right">
-                <ul className="nav navbar-nav">
+                <ul className="nav navbar-nav" role="nav">
                     <li id="nav-about" className="nav-bar-item">
                         <NavLink to="/" onlyActiveOnIndex>
                             About
