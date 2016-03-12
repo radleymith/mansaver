@@ -5,7 +5,7 @@ const SubscribeHeader = React.createClass({
         return (
             <h2 id="subscribe-main-header" className="">
                 Subscribe
-            <h2>
+            </h2>
         );
     }
 });

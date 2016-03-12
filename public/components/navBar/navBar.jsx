@@ -17,6 +17,11 @@ const NavBar = React.createClass({
                             What to Expect
                         </NavLink>
                     </li>
+                    <li id="nav-subscribe" className="nav-bar-item">
+                        <NavLink to="/subscribe">
+                            Subscribe
+                        </NavLink>
+                    </li>
                     <li id="nav-pipe" className="nav-bar-item">
                         <a>
                             |

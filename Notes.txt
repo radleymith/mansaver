@@ -1,0 +1,9 @@
+
+
+Props are passed down and available, basically from declaring components
+
+When using react-router you access the props from the route via, this.props.route.[the property name you passed] - - - VERY NIIIICE
+
+**Problem: redirect**
+In order to redirect if a user tries to go to a page where they need to be logged in, but haven't done so yet.  Use the history object that is available via react-router.  It has a replaceState method that is analogous to redirect.
+

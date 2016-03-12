@@ -1,4 +1,5 @@
 import React from 'react';
+import { Input } from 'react-bootstrap';
 
 const Login = React.createClass({
     render: function () {
@@ -7,8 +8,10 @@ const Login = React.createClass({
                 <h2 id="login-header" className="">
                     Login
                 </h2>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <form method="POST">
+                    <Input type="email" placeholder="Email" />
+                    <Input type="password" placeholder="Password" />
+                </form>
             </div>
         );
     }

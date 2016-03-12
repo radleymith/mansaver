@@ -1,4 +1,5 @@
 import React from 'react';
+import { Input } from 'react-bootstrap';
 
 const Register = React.createClass({
     render: function () {
@@ -8,14 +9,14 @@ const Register = React.createClass({
                     Register
                 </h2>
                 <form method="POST">
-                    <input type="text" placeholder="First Name" />
-                    <input type="text" placeholder="Last Name" />
-                    <input type='tel' pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' placeholder="Phone" />
-                    <input type="email" placeholder="Email" />
-                    <input type="text" placeholder="Address" />
-                    <input type="number" placeholder="Zip Code" />
-                    <input type="password" placeholder="Password" />
-                    <input type="password" placeholder="Password" />
+                    <Input type="text" placeholder="First Name" />
+                    <Input type="text" placeholder="Last Name" />
+                    <Input type='tel' pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' placeholder="Phone" />
+                    <Input type="email" placeholder="Email" />
+                    <Input type="text" placeholder="Address" />
+                    <Input type="number" placeholder="Zip Code" />
+                    <Input type="password" placeholder="Password" />
+                    <Input type="password" placeholder="Password" />
                 </form>
             </div>
         );

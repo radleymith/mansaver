@@ -34,3 +34,7 @@ node_modules
 
 #f u MAC
 .DS_Store
+*/.DS_Store
+
+#strompaht
+.stormpath
