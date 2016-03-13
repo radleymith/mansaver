@@ -1,6 +1,7 @@
 import React from 'react';
 import NavLink from '../navLink/navLink.jsx'
 import './navBar.less';
+import { NotAuthenticated, Authenticated, LoginLink, LogoutLink } from 'react-stormpath';
 
 const NavBar = React.createClass({
     render: function () {
@@ -27,16 +28,32 @@ const NavBar = React.createClass({
                             |
                         </a>
                     </li>
-                    <li id="nav-login" className="nav-bar-item">
-                        <NavLink to="/login">
-                            Login
-                        </NavLink>
-                    </li>
-                    <li id="nav-register" className="nav-bar-item">
-                        <NavLink to="/register">
-                            Register
-                        </NavLink>
-                    </li>
+                    <NotAuthenticated>
+                        <li id="nav-login" className="nav-bar-item">
+                            <LoginLink to="/login">
+                                Login
+                            </LoginLink>
+                        </li>
+                    </NotAuthenticated>
+                    <NotAuthenticated>
+                        <li id="nav-register" className="nav-bar-item">
+                            <NavLink to="/register">
+                                Register
+                            </NavLink>
+                        </li>
+                    </NotAuthenticated>
+                    <Authenticated>
+                        <li id="nav-profile" className="nav-bar-item">
+                            <NavLink to="/profile">
+                                Profile 
+                            </NavLink>
+                        </li>
+                    </Authenticated>
+                    <Authenticated>
+                        <li id="nav-profile" className="nav-bar-item">
+                            <LogoutLink />
+                        </li>
+                    </Authenticated>
                 </ul>
             </div>         
         );

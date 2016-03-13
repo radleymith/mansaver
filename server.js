@@ -1,13 +1,27 @@
 var path = require('path'),
     Express = require('express'),
     app = Express(),
+    stormpath = require('express-stormpath'),
+    webpack = require('webpack'),
+    webpackConfig = require('./webpack.config'),
+    morgan = require('morgan'),
+    compiler = webpack(webpackConfig),
     server;
 
 const PATH_BUILD = path.resolve(__dirname, './build');
 
+// app.use(require('webpack-dev-middleware')(compiler), {
+//     noInfo: true,
+//     publicPath: webpackConfig.output.publicPath
+// });
+app.use(morgan('combined'));
 app.use(Express.static(PATH_BUILD));
 
-app.get('/', (req, res) => {
+stormpath.init(app, {
+    website: true
+});
+
+app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, './public/home.html'));
 });
 
@@ -42,9 +56,11 @@ app.get('/', (req, res) => {
 // </html>
 //    `
 // }
+app.on('stormpath.ready', function () {
+    server = app.listen(process.env.PORT || 3000, () => {
+        var port = server.address().port;
 
-server = app.listen(process.env.PORT || 3000, () => {
-  var port = server.address().port;
-
-  console.log('Server is listening at %s', port);
+        console.log('Server is listening at %s', port);
+    });
 });
+

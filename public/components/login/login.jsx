@@ -1,6 +1,7 @@
 import React from 'react';
-import { Input } from 'react-bootstrap';
+import { LoginForm } from 'react-stormpath'
 
+//TODO: Add profile page and redirect to there
 const Login = React.createClass({
     render: function () {
         return (
@@ -8,10 +9,7 @@ const Login = React.createClass({
                 <h2 id="login-header" className="">
                     Login
                 </h2>
-                <form method="POST">
-                    <Input type="email" placeholder="Email" />
-                    <Input type="password" placeholder="Password" />
-                </form>
+                <LoginForm redirectTo="/expect" />
             </div>
         );
     }
