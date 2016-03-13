@@ -1,6 +1,6 @@
 import React from 'react';
-import { LoginRoute, HomeRoute, LogoutRoute, AuthenticatedRoute } from 'react-stormpath';
 import { Route, browserHistory, IndexRoute } from 'react-router';
+import { LoginRoute, HomeRoute, LogoutRoute, AuthenticatedRoute } from 'react-stormpath';
 import App from './views/app.jsx';
 import Home from './components/home/home.jsx';
 import Expect from './components/expect/expect.jsx';
