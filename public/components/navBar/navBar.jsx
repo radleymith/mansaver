@@ -1,5 +1,6 @@
 import React from 'react';
-import NavLink from '../navLink/navLink.jsx'
+// import NavLink from '../navLink/navLink.jsx'
+import { Link } from 'react-router';
 import './navBar.less';
 import { NotAuthenticated, Authenticated, LoginLink, LogoutLink } from 'react-stormpath';
 
@@ -9,19 +10,19 @@ const NavBar = React.createClass({
             <div id="nav-bar" className="pull-right">
                 <ul className="nav navbar-nav" role="nav">
                     <li id="nav-about" className="nav-bar-item">
-                        <NavLink to="/" onlyActiveOnIndex>
+                        <Link to="/" onlyActiveOnIndex>
                             About
-                        </NavLink>
+                        </Link>
                     </li>
                     <li id="nav-what-to-expect" className="nav-bar-item">
-                        <NavLink to="/expect">
+                        <Link to="/expect">
                             What to Expect
-                        </NavLink>
+                        </Link>
                     </li>
                     <li id="nav-subscribe" className="nav-bar-item">
-                        <NavLink to="/subscribe">
+                        <Link to="/subscribe">
                             Subscribe
-                        </NavLink>
+                        </Link>
                     </li>
                     <li id="nav-pipe" className="nav-bar-item">
                         <a>
@@ -37,16 +38,16 @@ const NavBar = React.createClass({
                     </NotAuthenticated>
                     <NotAuthenticated>
                         <li id="nav-register" className="nav-bar-item">
-                            <NavLink to="/register">
+                            <Link to="/register">
                                 Register
-                            </NavLink>
+                            </Link>
                         </li>
                     </NotAuthenticated>
                     <Authenticated>
                         <li id="nav-profile" className="nav-bar-item">
-                            <NavLink to="/profile">
+                            <Link to="/profile">
                                 Profile 
-                            </NavLink>
+                            </Link>
                         </li>
                     </Authenticated>
                     <Authenticated>

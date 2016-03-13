@@ -1,7 +1,7 @@
 import React from 'react';
 import SubscribeHeader from '../../components/subscribeHeader/subscribeHeader.jsx';
 import { Input, Button } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+// import { LinkContainer } from 'react-router-bootstrap';
 
 const SubscribeDays = React.createClass({
     render: function () {
@@ -16,12 +16,14 @@ const SubscribeDays = React.createClass({
                     <Input type="checkbox" label="Other" name="other1" value="" />
                 </form>
 
-                <LinkContainer to={{ pathname: '/subscribe/level' }}>
-                    <Button bsStyle="primary" bsSize="large">Continue</Button>
-                </LinkContainer>
+                
             </div>
         );
     }
 });
 
 export default SubscribeDays;
+
+// <LinkContainer to={{ pathname: '/subscribe/level' }}>
+                //     <Button bsStyle="primary" bsSize="large">Continue</Button>
+                // </LinkContainer>
