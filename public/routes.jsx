@@ -27,7 +27,7 @@ module.exports = (
             <Route path="recipient" component={SubscribeRecipient} />
         </Route>
         <AuthenticatedRoute>
-            <HomeRoute path='/profile' component={Profile} />
+            <HomeRoute path='/me' component={Profile} />
         </AuthenticatedRoute>
         <LogoutRoute path="/logout" />
     </Route>

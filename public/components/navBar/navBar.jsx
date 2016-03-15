@@ -45,7 +45,7 @@ const NavBar = React.createClass({
                     </NotAuthenticated>
                     <Authenticated>
                         <li id="nav-profile" className="nav-bar-item">
-                            <Link to="/profile">
+                            <Link to="/me">
                                 Profile 
                             </Link>
                         </li>

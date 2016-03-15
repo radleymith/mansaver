@@ -1,6 +1,7 @@
 var path = require('path'),
     Express = require('express'),
     app = Express(),
+    router = Express.Router(),
     stormpath = require('express-stormpath'),
     webpack = require('webpack'),
     webpackConfig = require('./webpack.config'),
@@ -10,20 +11,31 @@ var path = require('path'),
 
 const PATH_BUILD = path.resolve(__dirname, './build');
 
+app.use(morgan('combined'));
+//NOTE: dont know if i will need this or not
 // app.use(require('webpack-dev-middleware')(compiler), {
 //     noInfo: true,
 //     publicPath: webpackConfig.output.publicPath
 // });
-app.use(morgan('combined'));
+
 app.use(Express.static(PATH_BUILD));
 
-stormpath.init(app, {
-    website: true
-});
+//initialize with this conifguration to only use the JSON api
+app.use(stormpath.init(app, {
+    web: {
+        produces: ['application/json']
+    }
+}));
 
+//NOTE: might use this configuration in the future
+// spa: {
+//      enabled: true,
+//      view: path.join(__dirname, 'public', 'index.html') 
+// }
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, './public/home.html'));
+    res.sendFile(path.resolve(__dirname, './public/home.html'));
 });
+// router.post('/register',)
 
 // send all requests to index.html so browserHistory works
 // app.get('*', (req, res) => {
