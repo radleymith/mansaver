@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import SubscribeHeader from '../../components/subscribeHeader/subscribeHeader.jsx';
 import { Input, Button } from 'react-bootstrap';
-// import { LinkContainer } from 'react-router-bootstrap';
 
-const SubscribeDays = React.createClass({
-    render: function () {
+
+class SubscribeDays extends Component {
+    render () {
         return (
             <div>
                 <SubscribeHeader />
@@ -14,16 +14,11 @@ const SubscribeDays = React.createClass({
                     <Input type="checkbox" label="Valentines Day" name="valentines_day" value="2/14" />
                     <Input type="checkbox" label="Birthday" name="birthday" value="" />
                     <Input type="checkbox" label="Other" name="other1" value="" />
-                </form>
-
-                
+                </form>                
             </div>
         );
     }
-});
+};
 
 export default SubscribeDays;
 
-// <LinkContainer to={{ pathname: '/subscribe/level' }}>
-                //     <Button bsStyle="primary" bsSize="large">Continue</Button>
-                // </LinkContainer>

@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import SubscribeHeader from '../../components/subscribeHeader/subscribeHeader.jsx';
 import { Input } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
-const SubscribeLevel = React.createClass({
-    render: function () {
+class SubscribeLevel extends Component {
+    render () {
         return (
             <div>
                 <SubscribeHeader />
@@ -20,6 +20,6 @@ const SubscribeLevel = React.createClass({
             </div>
         );
     }
-});
+};
 
 export default SubscribeLevel;

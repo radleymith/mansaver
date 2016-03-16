@@ -1,12 +1,11 @@
-// main.js
-import React from 'react';
+import React, { Component } from 'react';
 import Title from '../components/title/title.jsx';
 import NavBar from '../components/navBar/navBar.jsx';
 import '../main.less'
 
 
-var App = React.createClass({
-    render: function () {
+class App extends Component {
+    render () {
         return (
             <div>
                 <nav id="title-bar" className="navbar navbar-default">
@@ -17,6 +16,6 @@ var App = React.createClass({
             </div>
         );
     }
-});
+};
 
 export default App;

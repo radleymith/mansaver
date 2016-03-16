@@ -2,13 +2,13 @@ import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 import { LoginRoute, HomeRoute, LogoutRoute, AuthenticatedRoute } from 'react-stormpath';
 import App from './views/app.jsx';
-import Home from './components/home/home.jsx';
-import Expect from './components/expect/expect.jsx';
-import Login from './components/login/login.jsx';
-import Register from './components/register/register.jsx';
-import SubscribeDays from './views/subscribe/subscribeDays.jsx';
-import SubscribeLevel from './views/subscribe/subscribeLevel.jsx';
-import SubscribeRecipient from './views/subscribe/subscribeRecipient.jsx';
+import Home from './views/homePage/homePage.jsx';
+import Expect from './views/expectPage/expectPage.jsx';
+import Login from './views/loginPage/loginPage.jsx';
+import Register from './views/registerPage/registerPage.jsx';
+import SubscribeDays from './views/subscribePage/subscribeDays.jsx';
+import SubscribeLevel from './views/subscribePage/subscribeLevel.jsx';
+import SubscribeRecipient from './views/subscribePage/subscribeRecipient.jsx';
 import Profile from './views/profilePage/profilePage.jsx';
 
 

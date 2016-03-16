@@ -1,18 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { LoginForm } from 'react-stormpath'
 
-//TODO: Add profile page and redirect to there
-const Login = React.createClass({
-    render: function () {
+class Login extends Component {
+    render () {
         return (
             <div>
                 <h2 id="login-header" className="">
                     Login
                 </h2>
-                <LoginForm redirectTo="/expect" />
+                <LoginForm redirectTo="/me" />
             </div>
         );
     }
-});
+};
 
 export default Login;

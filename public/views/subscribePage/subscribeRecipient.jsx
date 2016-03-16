@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import SubscribeHeader from '../../components/subscribeHeader/subscribeHeader.jsx';
 import { Input, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
-const SubscribeRecipient = React.createClass({
-    render: function () {
+class SubscribeRecipient extends Component {
+    render () {
         return (
             <div>
                 <SubscribeHeader />
@@ -58,6 +58,6 @@ const SubscribeRecipient = React.createClass({
             </div>
         );
     }
-});
+};
 
 export default SubscribeRecipient;
