@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SubscribeHeader from '../../components/subscribeHeader/subscribeHeader.jsx';
 import { Input, Button } from 'react-bootstrap';
+import { Link } from 'react-router';
 
 
 class SubscribeDays extends Component {
@@ -14,7 +15,11 @@ class SubscribeDays extends Component {
                     <Input type="checkbox" label="Valentines Day" name="valentines_day" value="2/14" />
                     <Input type="checkbox" label="Birthday" name="birthday" value="" />
                     <Input type="checkbox" label="Other" name="other1" value="" />
-                </form>                
+                    <Link to="/subscribe/level">
+                        <Button bsStyle="primary" bsSize="large">Continue</Button>
+                    </Link>
+                </form>
+                    {this.props.children}
             </div>
         );
     }

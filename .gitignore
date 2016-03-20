@@ -45,3 +45,5 @@ node_modules
 #build stuff
 build
 build/*
+*.sh
+.vscode

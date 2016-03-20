@@ -52,9 +52,9 @@ class SubscribeRecipient extends Component {
                         </li>
                     </ul>
                 </form>
-                <LinkContainer to="/subscribe/level">
+                
                     <Button type="submit" bsStyle="primary" bsSize="large">Submit</Button>
-                </LinkContainer>
+                
             </div>
         );
     }

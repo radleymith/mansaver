@@ -22,10 +22,9 @@ module.exports = (
         <Route path="/expect" component={Expect} />
         <LoginRoute path="/login" component={Login} />
         <Route path="/register" component={Register} />
-        <Route path="/subscribe" component={SubscribeDays}>
-            <Route path="level" component={SubscribeLevel} />
-            <Route path="recipient" component={SubscribeRecipient} />
-        </Route>
+        <Route path="/subscribe" component={SubscribeDays} />
+        <Route path="/subscribe/level" component={SubscribeLevel} />
+        <Route path="/subscribe/recipient" component={SubscribeRecipient} />
         <AuthenticatedRoute>
             <HomeRoute path='/me' component={Profile} />
         </AuthenticatedRoute>
