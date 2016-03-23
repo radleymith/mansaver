@@ -7,10 +7,12 @@ var path = require('path'),
     webpackConfig = require('./webpack.config'),
     morgan = require('morgan'),
     compiler = webpack(webpackConfig),
+    db = require('./lib/mongoConnector'),
     server;
 
 const PATH_BUILD = path.resolve(__dirname, './build');
 
+db.executeConnect('mongodb://localhost/forgiftful');
 app.use(morgan('combined'));
 //NOTE: dont know if i will need this or not
 // app.use(require('webpack-dev-middleware')(compiler), {
