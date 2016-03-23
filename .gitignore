@@ -41,6 +41,7 @@ node_modules
 
 #yaml files
 *.yml
+*.yaml
 
 #build stuff
 build
