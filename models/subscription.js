@@ -24,5 +24,4 @@ var mongoose = require('mongoose'),
     }),
     Subscription = mongoose.model('subscription', SubscriptionSchema);
 
-module.exports.SubscriptionSchema = SubscriptionSchema;
-module.exports.Subscription = Subscription;
+module.exports = Subscription;

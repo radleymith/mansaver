@@ -48,3 +48,6 @@ build
 build/*
 *.sh
 .vscode
+
+#other stuff
+serverTrashProlly.js

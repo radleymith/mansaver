@@ -1,28 +1,29 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     CustomerSchema = new Schema({
-        sharedId: String,
-        subscriptions: [{
-            person: {
-                name: {
-                    last: String,
-                    first: String
-                },
-                gender: Number,
-                dates: [{
-                    name: String,
-                    date: Date
-                }],
-                pricePer: Number,
-                totalAmount: Number,
-                shirtSize: Number,
-                pantSize: Number,
-                comments: String,
-                likes: String
-            }
+        email: {type: String, required: true},
+        name: {
+            last: {type: String, required: true},
+            first: {type: String, required: true}
+        },
+        subscriptions: [{          
+            name: {
+                last: {type: String, required: true},
+                first: {type: String, required: true}
+            },
+            gender: Number,
+            dates: [{
+                name: String,
+                date: Date
+            }],
+            pricePer: Number,
+            totalAmount: Number,
+            shirtSize: Number,
+            pantSize: Number,
+            comments: String,
+            likes: String            
         }]
     }),
-    Customer = mongoose.model('customer', CustomerSchema);
+    Customer = mongoose.model('Customer', CustomerSchema);
 
-module.exports.CustomerSchema = CustomerSchema;
-module.exports.Customer = Customer;
+module.exports = Customer;

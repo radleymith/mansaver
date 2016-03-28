@@ -8,68 +8,47 @@ var path = require('path'),
     morgan = require('morgan'),
     compiler = webpack(webpackConfig),
     db = require('./lib/mongoConnector'),
+    Customer = require('./models/customer'),
     server;
 
 const PATH_BUILD = path.resolve(__dirname, './build');
 
 db.executeConnect('mongodb://localhost/forgiftful');
 app.use(morgan('combined'));
-//NOTE: dont know if i will need this or not
-// app.use(require('webpack-dev-middleware')(compiler), {
-//     noInfo: true,
-//     publicPath: webpackConfig.output.publicPath
-// });
 
 app.use(Express.static(PATH_BUILD));
 
 //initialize with this conifguration to only use the JSON api
+//add a post registration handler
+//TODO: Move the handler out of this file
 app.use(stormpath.init(app, {
     web: {
         produces: ['application/json']
+    }, 
+    postRegistrationHandler: function (account, req, res, next) {
+        var customer = new Customer({
+            name: {
+                last: account.surname,
+                first: account.givenName
+            },
+            email: account.email
+        });
+
+        customer.save(function (err, success) {
+            if (err) {
+                console.log('There was an error saving: ' + account.email);
+            }
+            res.end();
+        });        
     }
 }));
 
-//NOTE: might use this configuration in the future
-// spa: {
-//      enabled: true,
-//      view: path.join(__dirname, 'public', 'index.html') 
-// }
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, './public/home.html'));
 });
-// router.post('/register',)
 
-// send all requests to index.html so browserHistory works
-// app.get('*', (req, res) => {
-//   match({ routes, location: req.url }, (err, redirect, props) => {
-//     if (err) {
-//       res.status(500).send(err.message);
-//     } else if (redirect) {
-//       res.redirect(redirect.pathname + redirect.search);
-//     } else if (props) {
-//       // hey we made it!
-//       const appHtml = renderToString(<RouterContext {...props}/>);
-//       res.send(renderPage(appHtml));
-//     } else {
-//       res.status(404).send('Not Found');
-//     }
-//   });
-// });
+app.use('/api', routes.api);
 
-// function renderPage(appHtml) {
-//   return `
-//     <html>
-// <head>
-// <meta charset="utf-8">
-// </head>
-// <body>
-// <section id="app">
-// </section>
-// <script type="text/javascript" src="bundle.js" charset="utf-8"></script>
-// </body>
-// </html>
-//    `
-// }
 app.on('stormpath.ready', function () {
     server = app.listen(process.env.PORT || 3000, () => {
         var port = server.address().port;
