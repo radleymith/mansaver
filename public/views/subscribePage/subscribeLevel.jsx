@@ -4,20 +4,21 @@ import { Input, Button } from 'react-bootstrap';
 import { Link } from 'react-router';
 
 class SubscribeLevel extends Component {
+    saveValues (e) {
+        console.log(e.target.value);
+    }
     render () {
         return (
             <div>
                 <SubscribeHeader />
 
-                    <Input type="radio" label="card (10.95 per reminder)" name="level" value="10.95" />
-                    <Input type="radio" label="card + gift (50 per reminder)" name="level" value="50" />
-                    <Input type="radio" label="card + large gift (120 per reminder)" name="level" value="120" />
-                    <Input type="radio" label="you specify (must be more than $150.00)" name="level" value="tbd" />
+                    <Input type="radio" label="card (10.95 per reminder)" name="level" value="10.95" onChange={saveValues} />
+                    <Input type="radio" label="card + gift (50 per reminder)" name="level" value="75" onChange={saveValues} />
+                    <Input type="radio" label="card + large gift (120 per reminder)" name="level" value="150" onChange={saveValues} />
 
                 <Link to="/subscribe/recipient">
                     <Button bsStyle="primary" bsSize="large">Continue</Button>
                 </Link>
-                {this.props.children}
             </div>
         );
     }

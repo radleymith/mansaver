@@ -47,7 +47,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, './public/home.html'));
 });
 
-app.use('/api', routes.api);
+// app.use('/api', routes.api);
 
 app.on('stormpath.ready', function () {
     server = app.listen(process.env.PORT || 3000, () => {
