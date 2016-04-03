@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 
 class SubscribeCombine extends Component {
-    // var fields = {}
-    // saveFields (newFields) {
-    //     fields = Object.assign({}, fields, newFields);
-    // }
-    // constructor () {
-    //     super();
-    //     this._saveValues = this._saveValues.bind(this);
-    // },
+    constructor () {
+        super();
+        this.saveValues = this.saveValues.bind(this);
+    }
+    saveValues (e) {
+        console.log('we hitting the parent: ' + e.target.value);
+    }
     render () {
         return ( 
             <form action="POST" target="">
@@ -16,9 +15,7 @@ class SubscribeCombine extends Component {
             </form>
         );
     }
-    // _saveValues (target) {
-
-    // }
+    
 };
 
 export default SubscribeCombine;

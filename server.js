@@ -23,7 +23,10 @@ app.use(Express.static(PATH_BUILD));
 //TODO: Move the handler out of this file
 app.use(stormpath.init(app, {
     web: {
-        produces: ['application/json']
+        spa: {
+             enabled: true,
+             view: path.join(__dirname, 'public', 'home.html') 
+        }
     }, 
     postRegistrationHandler: function (account, req, res, next) {
         var customer = new Customer({

@@ -5,9 +5,9 @@ import { Link } from 'react-router';
 
 
 class SubscribeDays extends Component {
-    saveValues (e) {
-        console.log(e.target.value);
-    }
+    // saveValues (e) {
+    //     console.log(e.target.value);
+    // }
     render () {
         return (
             <div>
