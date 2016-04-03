@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Explanation () => {
+const Explanation = () => {
     return (
         <div id="explanation-text" className="front-page-text">
             We know that you are busy.  We also know that you are human, and humans forget things.  
