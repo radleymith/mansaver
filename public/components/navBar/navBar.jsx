@@ -1,5 +1,4 @@
 import React from 'react';
-// import NavLink from '../navLink/navLink.jsx'
 import { Link } from 'react-router';
 import './navBar.less';
 import { NotAuthenticated, Authenticated, LoginLink, LogoutLink } from 'react-stormpath';
@@ -14,12 +13,12 @@ const NavBar = () => {
                     </Link>
                 </li>
                 <li id="nav-what-to-expect" className="nav-bar-item">
-                    <Link to="/expect">
+                    <Link to="/expect" activeClassName='-active'>
                         What to Expect
                     </Link>
                 </li>
                 <li id="nav-subscribe" className="nav-bar-item">
-                    <Link to="/subscribe">
+                    <Link to="/subscribe" activeClassName='-active'>
                         Subscribe
                     </Link>
                 </li>
@@ -30,21 +29,21 @@ const NavBar = () => {
                 </li>
                 <NotAuthenticated>
                     <li id="nav-login" className="nav-bar-item">
-                        <LoginLink to="/login">
+                        <LoginLink to="/login" activeClassName='-active'>
                             Login
                         </LoginLink>
                     </li>
                 </NotAuthenticated>
                 <NotAuthenticated>
                     <li id="nav-register" className="nav-bar-item">
-                        <Link to="/register">
+                        <Link to="/register" activeClassName='-active'>
                             Register
                         </Link>
                     </li>
                 </NotAuthenticated>
                 <Authenticated>
                     <li id="nav-profile" className="nav-bar-item">
-                        <Link to="/me">
+                        <Link to="/me" activeClassName='-active'>
                             Profile 
                         </Link>
                     </li>
@@ -58,6 +57,5 @@ const NavBar = () => {
         </div>         
     );
 };
-
 
 export default NavBar;

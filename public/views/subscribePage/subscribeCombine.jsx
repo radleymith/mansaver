@@ -9,13 +9,14 @@ class SubscribeCombine extends Component {
         console.log('we hitting the parent: ' + e.target.value);
     }
     render () {
+        var childrenWithProps = React.Children.map(this.props.children, (child) => React.cloneElement(child, {saveValues: this.saveValues}));
+
         return ( 
             <form action="POST" target="">
-                {this.props.children}
+                {childrenWithProps}
             </form>
         );
-    }
-    
+    }    
 };
 
 export default SubscribeCombine;

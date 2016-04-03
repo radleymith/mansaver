@@ -28,13 +28,13 @@ module.exports = (
                 <IndexRoute component={SubscribeDays} />
             </AuthenticatedRoute>
             <AuthenticatedRoute>
-                <Route path="/subscribe/days" component={SubscribeDays} />
+                <Route path="days" component={SubscribeDays} />
             </AuthenticatedRoute>
             <AuthenticatedRoute>
-                <Route path="/subscribe/level" component={SubscribeLevel} />
+                <Route path="level" component={SubscribeLevel} />
             </AuthenticatedRoute>
             <AuthenticatedRoute>
-                <Route path="/subscribe/recipient" component={SubscribeRecipient} />
+                <Route path="recipient" component={SubscribeRecipient} />
             </AuthenticatedRoute>
             <AuthenticatedRoute>
                 <HomeRoute path='/me' component={Profile} />
