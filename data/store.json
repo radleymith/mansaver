@@ -1,0 +1,98 @@
+[{
+"email": "cookie@gmail.com",
+        "name": {
+            "last": "Monster",
+            "first": "Cookie"
+        },
+        "subscriptions": [{          
+            "name": {
+                "last": "Nabisco",
+                "first": "Sugars"
+            },
+            "gender": 0,
+            "dates": [{
+                "name": "christmas",
+                "date": {
+                    "month": 12,
+                    "day": 25
+                }
+            }, {
+                "name": "valentines",
+                "date": {
+                    "month": 2,
+                    "day": 14
+                }
+            }, {
+                "name": "channukah",
+                "date": {
+                    "month": 12,
+                    "day": 14
+                }
+            }],
+            "pricePer": "10.95",
+            "shirtSize": 1,
+            "pantSize": 1,
+            "comments": "Some comments about stuff",
+            "likes": "people, places, things, fun things,"            
+        }, {          
+            "name": {
+                "last": "Nabisco",
+                "first": "Sugars"
+            },
+            "gender": 0,
+            "dates": [{
+                "name": "christmas",
+                "date": {
+                    "month": 12,
+                    "day": 25
+                }
+            }, {
+                "name": "valentines",
+                "date": {
+                    "month": 2,
+                    "day": 14
+                }
+            }, {
+                "name": "channukah",
+                "date": {
+                    "month": 12,
+                    "day": 14
+                }
+            }],
+            "pricePer": "10.95",
+            "shirtSize": 1,
+            "pantSize": 1,
+            "comments": "Some comments about stuff",
+            "likes": "people, places, things, fun things,"            
+        }, {          
+            "name": {
+                "last": "Nabisco",
+                "first": "Sugars"
+            },
+            "gender": 0,
+            "dates": [{
+                "name": "christmas",
+                "date": {
+                    "month": 12,
+                    "day": 25
+                }
+            }, {
+                "name": "valentines",
+                "date": {
+                    "month": 2,
+                    "day": 14
+                }
+            }, {
+                "name": "channukah",
+                "date": {
+                    "month": 12,
+                    "day": 14
+                }
+            }],
+            "pricePer": "10.95",
+            "shirtSize": 1,
+            "pantSize": 1,
+            "comments": "Some comments about stuff",
+            "likes": "people, places, things, fun things,"            
+        }]
+}]

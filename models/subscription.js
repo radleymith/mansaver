@@ -15,7 +15,6 @@ var mongoose = require('mongoose'),
                 date: Date
             }],
             pricePer: Number,
-            totalAmount: Number,
             shirtSize: Number,
             pantSize: Number,
             comments: String,
