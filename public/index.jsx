@@ -4,10 +4,8 @@ import ReactStormpath, { Router } from 'react-stormpath';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 import routes from './routes.jsx';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import reducers from './reducers';
+import store from './store';
 
-let store = createStore(reducers);
 
 ReactStormpath.init();
 

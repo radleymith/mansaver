@@ -17,10 +17,10 @@ class SubscribeRecipient extends Component {
                 <hr />
                     <ul className="unstyled">
                         <li>
-                            <Input type="text" placeholder="First Name" />
+                            <Input name="name-first" type="text" placeholder="First Name" />
                         </li>
                         <li>
-                            <Input type="text" placeholder="Last Name" />
+                            <Input name="name-last" type="text" placeholder="Last Name" />
                         </li>
                         <li>
                             <label>

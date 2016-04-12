@@ -40,6 +40,6 @@ export function commentChange (text) {
 export function giftLevelChange (level) {
     return {
         type: types.GIFT_LEVEL_CHANGE,
-        level
+        giftLevel
     };
 }

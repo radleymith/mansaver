@@ -4,6 +4,8 @@ var mongoose = require('mongoose'),
 
 //TODO: Make a response controller
 module.exports.subscribe = function (req, res, next) {
+
+    console.log('>>>>>>:  ' + JSON.stringify(req.body))
     var email = req.body.email,
         subscription = req.body.subscription;
 

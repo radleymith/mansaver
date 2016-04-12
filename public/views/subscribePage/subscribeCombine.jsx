@@ -12,7 +12,7 @@ class SubscribeCombine extends Component {
         var childrenWithProps = React.Children.map(this.props.children, (child) => React.cloneElement(child, {saveValues: this.saveValues}));
 
         return ( 
-            <form action="POST" target="">
+            <form method="POST" action="/api/subscribe">
                 {childrenWithProps}
             </form>
         );
