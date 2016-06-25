@@ -3,6 +3,21 @@ import { Link } from 'react-router';
 import './navBar.less';
 import { NotAuthenticated, Authenticated, LoginLink, LogoutLink } from 'react-stormpath';
 
+// const links = [
+//     {
+//         to: '/expect',
+//         text: 'What to Expect'
+//     },
+//     {
+//         to: '/subscribe',
+//         text: 'Subscribe'
+//     },
+//     {
+//         text: '|'
+//     },
+    
+// ]
+
 const NavBar = () => {
     return (
         <div id="nav-bar" className="pull-right">
